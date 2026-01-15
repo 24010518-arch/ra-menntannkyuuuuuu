@@ -1,0 +1,290 @@
+/* Google Fonts 使用部分は HTML 側に読み込みを追加する */
+
+/* 基本設定 */
+body {
+    margin: 0;
+    background: #fafafa;
+    font-family: 'Noto Sans JP', sans-serif;
+    /* 本文用フォント */
+}
+
+/* ヘッダー */
+header {
+    background: #c62828;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* --- ロゴ --- */
+.logo {
+    height: 50px;
+    /* ロゴ画像の高さ調整 */
+}
+
+.logo-text {
+    font-family: 'Kaisei Tokumin', serif;
+    /* ロゴ横の文字に和風フォント */
+    font-size: 1.4rem;
+    margin-left: 8px;
+}
+
+/* ロゴと文字を横並びにする */
+.logo-wrap {
+    display: flex;
+    align-items: center;
+}
+
+/* ナビゲーション */
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* --- トップページ大画像 --- */
+.hero-image {
+    background-image: url("images/ramenn.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 0 0 10px black;
+    font-size: 3vw;
+    /* 画面に合わせて自動で文字サイズ調整 */
+}
+
+/* 歴史ページ */
+
+/* h2 全体のスタイル */
+.history-section {
+  background: #ffe3e3;
+  padding: 40px;
+  border-radius: 16px;
+  margin-bottom: 40px;
+}
+
+/* タイトル全体を左寄せにする */
+.title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;         /* ロゴと文字のすき間 */
+  margin-bottom: 20px;
+}
+
+/* タイトル文字 */
+.title-wrap h2 {
+  margin: 0;
+  font-size: 32px;
+  color: #2c3e50;
+}
+
+/* ロゴ画像 */
+.title-wrap .icon {
+  width: 60px;   /* 好みに調整してOK */
+  height: auto;
+}
+
+
+/* ▼各セクションの背景色（柔らかめ） */
+.kigenn {
+    background-color: #e5ffe5;
+}
+
+.history-section img {
+    width: 220px;
+    height: 120px;
+}
+
+
+
+.kaika {
+    background-color: #FFE6E6;
+}
+
+.fukyuu {
+    background-color: #FFFDE6;
+}
+
+.teichaku {
+    background-color: #e0e0ff;
+}
+
+.hattenn {
+    background-color: #ffeddb;
+}
+
+
+
+
+
+/* セクション */
+main {
+    padding: 20px;
+}
+
+/* 見出しに特別なフォント */
+h1,
+h2,
+h3 {
+    font-family: 'Noto Serif JP', serif;
+}
+
+/* 全国ラーメン紹介 & おすすめ店カード */
+.popular-ramen {
+    padding: 40px;
+}
+
+.ramen-cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.ramen-card {
+    width: 30%;
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.ramen-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.ramen- {
+  text-align: center;
+}
+
+.shop-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.shop-title {
+    font-size: 48px;
+    color: #c40000;
+    margin-bottom: 10px;
+}
+
+.shop-subtitle {
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.shop-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.shop-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.shop-card:hover {
+    transform: translateY(-8px);
+}
+
+.shop-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.shop-card h3 {
+    font-size: 22px;
+    color: #c40000;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.shop-card p {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.map-btn {
+    display: inline-block;
+    background: #c40000;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.map-btn:hover {
+    background: #920000;
+}
+
+
+
+/* -------------------- */
+/* スマホ用 レスポンシブ */
+/* -------------------- */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .hero-image {
+        height: 35vh;
+        font-size: 6vw;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .logo {
+        height: 40px;
+    }
+
+    .ramen-cards {
+        display: block;
+        width: 100%;
+        
+    }
+    .ramen-card {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+}
